@@ -1,0 +1,25 @@
+{
+  "name": "extype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "concurrently --kill-others \"npm run tsc:watch\" \"npm run run:live\"",
+    "run:live": "nodemon ./build/index.js",
+    "tsc:watch": "tsc --watch",
+    "tsc:build": "tsc"
+  },
+  "author": "Daniel Castrillon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "@types/node": "^9.3.0",
+    "concurrently": "^3.5.1",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2",
+    "typescript-eslint-parser": "^12.0.0"
+  }
+}
